@@ -2,7 +2,7 @@ Android复习项目
 1.Git的使用
   git clone github远程仓库地址  : 将远程仓库clone到本地
   git add -A                   : 将修改的内容全部添加到暂存区
-  git push origin master       : 将提交到主分支的文件添加到远程库
+  git push origin master       : 将提交到主分支的文件添加到远程库（远程仓库的默认名称为origin）
 
   git add 文件名.扩展名 : 将文件添加到暂存区（在.git文件夹下）
   git commit -m "提示" : 将暂存区的文件提交到当前分支
@@ -38,3 +38,29 @@ Android复习项目
   git stash drop  : 删除stash
   git stash poop : 恢复现场方式二，恢复后stash也会被删除
   git stash apply 由git stash list 命令查看得到的stash的id(如:stash@{0})
+
+  一个项目中添加一个新的功能,新建一个分支，开发完成后add，commit，但是当前尚未合并，此时需求变化，不需要此功能，要立刻删除，则：
+  git branch -D 要删除的分支名（删除一个没有被合并过的分支）
+
+  git remote : 查看远程库信息
+  git remote -v : 查看远程库详细信息
+
+  git push origin 分支名:推送分支
+  哪些分支可以推送?
+  master分支是主分支，因此要时刻与远程同步；
+  dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+  bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+  feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+
+  git tag 标签名（方便打包,因为commitId不好识记）
+  git log --pretty=oneline --abbrev-commit :找到之前的提交id的日志
+  git tag 标签名(如v1.0) 提交id
+  git tag : 查看标签
+  git show 标签名 : 查看标签详细信息
+  git tag -a v0.1 -m "version 0.1 released" 3628164 : 创建带有说明的标签（-a指定标签名,-m指定说明文字）
+  git tag -d 标签名 : 删除标签（未推送的远程库）
+  git push origin 标签名 : 推送指定标签到远程库
+  git push origin --tags : 一键推送本地所有标签
+  删除已经推送到远程库的标签:
+  git tag -d 标签名 : 在本地删除标签
+  git push origin :refs/tags/标签名
