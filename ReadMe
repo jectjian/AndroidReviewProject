@@ -1,1 +1,6 @@
 Android复习项目
+1.Git的使用
+  git clone github远程仓库地址  : 将远程仓库clone到本地
+  git add -A                   : 将修改的内容全部添加到暂存区
+  git commit -m "提示"          ：将暂存区的文件提交到主分支
+  git push origin master       : 将体提交到主分支的文件添加到远程库
