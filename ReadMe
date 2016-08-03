@@ -64,3 +64,14 @@ Android复习项目
   删除已经推送到远程库的标签（分两步）:
   (1)git tag -d 标签名 : 在本地删除标签
   (2)git push origin :refs/tags/标签名 : 在远程库删除标签
+
+
+2.Android复习大纲
+  (1) Activity
+  (2) Service
+  (3) ContentProvider
+  (4) BroadCastReceiver
+  (5) Sqlite
+  (6) Intent
+  (7) 其他存储
+  (8) 第三方框架/第三方接入
