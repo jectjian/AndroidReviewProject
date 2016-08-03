@@ -29,3 +29,12 @@ Android复习项目
   git branch : 查看当前分支
   git merge dev : 将dev分支合并到master分支（先切换当前分支为master分支，然后在执行此命令）
   git branch -d dev : 删除dev分支
+
+  当在dev分支开发时，突然要解决一个bug,则想新建一个bug分支，但是当前的dev分支上的工作还没结束，还不能提交，此时就可以:
+  git stash : 保存当前工作现场
+  bug解决后再切回到dev分支后，需要恢复现场
+  git stash list : 保存的工作现场列表
+  git stash apply : 恢复现场方式一，恢复后stash不会被删除，需要手动命令删除
+  git stash drop  : 删除stash
+  git stash poop : 恢复现场方式二，恢复后stash也会被删除
+  git stash apply 由git stash list 命令查看得到的stash的id(如:stash@{0})
