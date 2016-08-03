@@ -61,6 +61,6 @@ Android复习项目
   git tag -d 标签名 : 删除标签（未推送的远程库）
   git push origin 标签名 : 推送指定标签到远程库
   git push origin --tags : 一键推送本地所有标签
-  删除已经推送到远程库的标签:
-  git tag -d 标签名 : 在本地删除标签
-  git push origin :refs/tags/标签名
+  删除已经推送到远程库的标签（分两步）:
+  (1)git tag -d 标签名 : 在本地删除标签
+  (2)git push origin :refs/tags/标签名 : 在远程库删除标签
