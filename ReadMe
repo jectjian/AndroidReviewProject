@@ -16,7 +16,7 @@ Android复习项目
   git reflog : 查看历史命令记录
 
   本地的一个文件夹（项目所在文件夹）为一个工作区，工作区中的.git文件夹为一个版本库
-  git版本库中包含:暂存区（stage）, git自动创建的第一个分之master , 指向master的指针HEAD
+  git版本库中包含:暂存区（stage）, git自动创建的第一个分支master , 指向master的指针HEAD
 
   git checkout -- 文件名.扩展名 : 把该文件在工作区的修改全部撤销
 
@@ -24,8 +24,8 @@ Android复习项目
   注意:提交到版本库的文件永远不会担心被误删。已提交到版本库，若发现删错了，则可以用git checkout -- 文件名.扩展名进行文件恢复。
        此时文件恢复原理是:将版本库中的文件替换工作区中的文件
 
-  git checkout -b dev : 创建并切换到新的分之dev,相当于git branch dev 和  git checkout dev (创建并切换到dev分之)
-  git checkout 分之名 : 切换分之
-  git branch : 查看当前分之
-  git merge dev : 将dev分之合并到master分之（先切换当前分之为master分之，然后在执行此命令）
-  git branch -d dev : 删除dev分之
+  git checkout -b dev : 创建并切换到新的分支dev,相当于git branch dev 和  git checkout dev (创建并切换到dev分支)
+  git checkout 分支名 : 切换分支
+  git branch : 查看当前分支
+  git merge dev : 将dev分支合并到master分支（先切换当前分支为master分支，然后在执行此命令）
+  git branch -d dev : 删除dev分支
