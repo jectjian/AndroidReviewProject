@@ -5,8 +5,8 @@ Android复习项目
   git commit -m "提示"          ：将暂存区的文件提交到主分支
   git push origin master       : 将提交到主分支的文件添加到远程库
 
-  git add 文件名.扩展名 : 将文件添加到暂存区
-  git commit -m "提示" : 将暂存区的文件提交到主分支
+  git add 文件名.扩展名 : 将文件添加到暂存区（在.git文件夹下）
+  git commit -m "提示" : 将暂存区的文件提交到当前分支
   git push origin master : 将本地仓库主分支的文件添加到远程仓库的主分支上
   git status : 仓库当前状态
   git diff 文件名: 查看不同，查看当前文件的修改
@@ -15,3 +15,6 @@ Android复习项目
   git reset -hard HEAD^ : 回退版本（HEAD 当前版本 ; HEAD^ 上一版本 ; HEAD^^ 上上一个版本）
   git reset -hard 版本号 ：回到指定版本（版本号为由SHA1计算出来的16进制数）
   git reflog : 查看历史命令记录
+
+  本地的一个文件夹（项目所在文件夹）为一个工作区，工作区中的.git文件夹为一个版本库
+  git版本库中包含:暂存区（stage）, git自动创建的第一个分之master , 指向master的指针HEAD
